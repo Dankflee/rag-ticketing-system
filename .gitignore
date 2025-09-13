@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environment
+.env
+
+# ChromaDB data
+chroma_data/
+
+# IDEs
+.vscode/
+.idea/
+
+# Docker
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Virtual Environments
+venv/
+env/
+
+# Others
+*.sqlite3
+*.db
+*.pyc

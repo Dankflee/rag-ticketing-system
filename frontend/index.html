@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAG Ticketing System</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎫 RAG Ticketing System</h1>
+            <p>Create tickets and ask questions using natural language</p>
+        </header>
+
+        <div class="main-content">
+            <div class="chat-section">
+                <div class="chat-header">
+                    <h2>💬 Chat Assistant</h2>
+                    <div class="status" id="status">Ready</div>
+                </div>
+                
+                <div class="chat-container">
+                    <div class="chat-messages" id="chatMessages">
+                        <div class="message bot">
+                            <div class="message-content">
+                                <strong>Assistant:</strong> Hello! I can help you create tickets and answer questions. Try saying:
+                                <ul>
+                                    <li>"Create a ticket for John: fix login bug, priority P1"</li>
+                                    <li>"Show me all open tickets"</li>
+                                    <li>"How do I reset the staging database?"</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="chat-input">
+                        <input 
+                            type="text" 
+                            id="messageInput" 
+                            placeholder="Type your message here..." 
+                            autocomplete="off"
+                        >
+                        <button id="sendButton">Send</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tickets-section">
+                <div class="tickets-header">
+                    <h2>📋 Recent Tickets</h2>
+                    <button id="refreshTickets">Refresh</button>
+                </div>
+                
+                <div class="tickets-container" id="ticketsContainer">
+                    <div class="loading">Loading tickets...</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
